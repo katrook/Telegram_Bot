@@ -25,12 +25,6 @@ HELP = '''
 
 todos = {}
 
-# todos = {
-#     "1 час": ["поиграть", "побегать", "заняться спортом"],
-#     "пол часа": ["почитать книгу"],
-#     "2 часа": ["посмотреть кино", "учить Python"]
-# }
-
 def get_commands_keyboard():
     commands_keyboard = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True, one_time_keyboard=True)
     button1 = types.KeyboardButton('💡Помощь')
