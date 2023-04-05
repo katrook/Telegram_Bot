@@ -62,7 +62,7 @@ def help(message):
                 tasks_show += str(key) + ': ' + str(value).strip("]'[").replace("'", "") + '\n'
             msg = bot.send_message(chat_id, tasks_show, reply_markup=get_commands_keyboard())
     elif message.text == '🎲 Чем заняться?':
-        if not todos[chat_id]:
+        if not todos.get(chat_id):
             msg = bot.send_message(chat_id, 'Список задач пуст. Добавь задачи', reply_markup=get_commands_keyboard())
         else:
             markup = types.InlineKeyboardMarkup()
